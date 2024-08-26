@@ -27,4 +27,4 @@ To replicate section 5, the following data files are needed:
 - LatLongUS.xlsx for latitude and longitude (needed for clustering task in our algorithm);
 - CPI_growth, LongTerm_ir and RealInc_growth are files including observable factors z.
 
-  All figures and tables will be generated directly from the R code. We indicate with comments in the R code when a given part of the code is used to generate a specific table or figure. We use the same numbering of tables and figures as appears in the manuscript.
+Figure 5 of the paper (showing the clustering results using full-sample data) is obtained outside the R environment, specifically from the website https://www.mapchart.net/usa.html and using the clustering results. The other figures and tables will be generated directly from the R code "IJF_MF_empirical". We indicate with comments when a given part of the code is used to generate a specific table or figure. We use the same numbering of tables and figures as appears in the manuscript.
