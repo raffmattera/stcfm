@@ -1,6 +1,6 @@
 # Replication files for "Forecasting house prices growth rates with factor models and spatio-temporal clustering"
 
-Here you can find the files to replicate the results of the paper "Forecasting house prices growth rates with factor models and spatio-temporal clustering".
+Here you can find the files to replicate the results of the paper "Forecasting house prices growth rates with factor models and spatio-temporal clustering", written by Raffaele Mattera and Philip Hans Franses.
 
 The results can be obtained from the following two main R codes:
 
