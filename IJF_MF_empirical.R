@@ -137,15 +137,7 @@ STfacm <- function(data, coords, typeD="COR", Wmat=NULL, maxitr=100, G=NULL, tol
   # Step 4: Spatio-temporal clustering of the residuals
   
   # 4.1: TS Distance:
-  
-  #DGmat <- DTWfeatures(ResTS)
-  
-  #D0<-matrix(NA, N, N) # Time evolution
-  #for (i in 1:ncol(D0)) {
-  #  for (j in 1:ncol(D0)) {
-  #    D0[i,j] <- DTWmyf(ResTS[,i],ResTS[,j], DGmat[[i+1]],DGmat[[j+1]])$dval
-  #  }
-  #}
+ 
   D0 <- diss(t(E), typeD)
   D0<-D0/max(D0)
   
@@ -190,8 +182,7 @@ STfacm <- function(data, coords, typeD="COR", Wmat=NULL, maxitr=100, G=NULL, tol
       cLF[[c]] <- 0 # "No Local Factor"
     }
     
-    #clf <- cLF[[c]]
-    
+
     if (length(cLF[[c]])==1) {
       
       resC[[c]] <- E[,clustering==c]
@@ -237,14 +228,8 @@ STfacm <- function(data, coords, typeD="COR", Wmat=NULL, maxitr=100, G=NULL, tol
       }
     }
     
-    #DGmat <- DTWfeatures(ResTS)
-    
+
     D0<-matrix(NA, N, N) # Time evolution
-    #for (i in 1:ncol(D0)) {
-    #  for (j in 1:ncol(D0)) {
-    #    D0[i,j] <- DTWmyf(ResTS[,i],ResTS[,j], DGmat[[i+1]],DGmat[[j+1]])$dval
-    #  }
-    #}
     D0 <- diss(t(E), typeD)
     D0<-D0/max(D0)
     res.hc<-GeoClustf(D0,D1)
@@ -270,8 +255,6 @@ STfacm <- function(data, coords, typeD="COR", Wmat=NULL, maxitr=100, G=NULL, tol
         Pc[[c]] <- 0
         cLF[[c]] <- 0 # "No Local Factor"
       }
-      
-      #clf <- cLF[[c]]
       
       if (length(cLF[[c]])==1) {
         
@@ -412,8 +395,7 @@ GeoClustf<-function(D0,D1){
   nn <- ncol(D1)-1
   res.hc0<-hclustgeo(as.dist(D0),as.dist(D1), alpha=0, scale = FALSE)
   kk <- elbow_finder(seq(1:nn),sort(res.hc0$height,decreasing = T))[1]
-  #kk <- elbow_finder2(seq(1:14),sort(res.hc0$height,decreasing = T))
-  
+
   cr <- choicealpha(as.dist(D0),as.dist(D1),seq(0,1,0.1),kk,graph=TRUE, scale = FALSE)
   a <- cr$range.alpha[which.min(abs(cr$Qnorm[,1]-cr$Qnorm[,2]))]
   res.hc0<-hclustgeo(as.dist(D0),as.dist(D1), alpha=a, scale = FALSE)
@@ -445,8 +427,6 @@ elbow_finder <- function(x_values, y_values) {
   # Max distance point
   x_max_dist <- x_values[which.max(distances)]
   y_max_dist <- y_values[which.max(distances)]
-  
-  #y_max_dist0 <- ifelse(y_max_dist==2, y_max_dist, y_max_dist-1)
   
   return(c(x_max_dist, y_max_dist))
 }
