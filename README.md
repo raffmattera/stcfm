@@ -11,6 +11,8 @@ The function implementing our methodology is called "STfacm" and requires the pa
 
 To reproduce the results correctly, we suggest downloading data and codes in the same folder (e.g. as a zip file) and running the R codes directly from this folder.
 
+Please, feel free to contact the corresponding author (raffaele.mattera@uniroma1.it) for any questions on the paper and its code.
+
 # Simulations (Section 4):
 
 It is important to load the shapefiles for the US geography to obtain the simulation results. You can find the files called ."US_States_Boundaries" with different extensions. Please, ensure that all these files are in the same folder where the R code is executed.
