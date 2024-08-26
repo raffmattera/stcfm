@@ -1,8 +1,8 @@
 # Replication files for "Forecasting house prices growth rates with factor models and spatio-temporal clustering"
 
-This is a file explaining how to replicate the results of the paper "Forecasting house prices growth rates with factor models and spatio-temporal clustering".
+Here you can find the files to replicate the results of the paper "Forecasting house prices growth rates with factor models and spatio-temporal clustering".
 
-Here you can find two main R codes:
+The results can be obtained from the following two main R codes:
 
 - IJF_MF_simulations, needed for replicating the results (tables and figures) of the simulation study in Section 4;
 - IJF_MF_empirical, needed for replicating the results of the forecasting experiment (Section 5).
