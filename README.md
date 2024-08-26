@@ -4,16 +4,18 @@ Here you can find the files to replicate the results of the paper "Forecasting h
 
 The results can be obtained from the following two main R codes:
 
-- IJF_MF_simulations, needed for replicating the results (tables and figures) of the simulation study in Section 4;
-- IJF_MF_empirical, needed for replicating the results of the forecasting experiment (Section 5).
+- IJF_MF_simulations, for replicating the results (tables and figures) of the simulation study (Section 4);
+- IJF_MF_empirical, to replicate the results of the forecasting experiment (Section 5).
 
-The function implementing our methodology is called "STfacm" and requires the packages "TSclust" and "ClustGeo" to be used. The Ando and Bai (2017) approach is adapted to our setting from the "PDMIF" package.
+The function implementing our methodology is called "STfacm" and requires the packages "TSclust" and "ClustGeo" to be used. The Ando and Bai (2017) approach is adapted from the "PDMIF" package.
+
+To reproduce the results correctly, we suggest downloading data and codes in the same folder (e.g. as a zip file) and running the R codes directly from this folder.
 
 # Simulations (Section 4):
 
-To make the simulations work, shapefiles on US geography are needed. These are the files ."US_States_Boundaries" with different extensions. Ensure you have all the files with all the extensions in the folder where the R code is.
+It is important to load the shapefiles for the US geography to obtain the simulation results. You can find the files called ."US_States_Boundaries" with different extensions. Please, ensure that all these files are in the same folder where the R code is executed.
 
-The figures in the R script will appear exactly as in the paper. About the tables in Section 4, the results will all be obtained from the R code, but we arranged the tables manually in the paper. Readers can verify that the numbers obtained with simulations (ARI, Forecast accuracy) correspond to those of the tables.
+G3_dgp1, G3_dgp2, G4_dgp1, G4_dgp2 are lists containing the results of all the 1000 simulations, considering 3 or 4 clusters under DGP1 or DGP2. Tables and figures in Section 4 are extracted from these lists. The results in Tables 1 and 2 will be obtained from the R code "IJF_MF_simulations", but we arranged the tables manually in the paper. Therefore, the readers can verify that the numbers obtained with simulations (ARI, Forecast accuracy) correspond to those of the paper, even if the presentation may be slightly different. About the Figures 2 and 3, we provided a code to obtain a subfigure with a generic time series length T. The readers are required to just change the length of the simulated time series T (called "tlength") in the code to obtain other subfigures.
 
 # Empirical (Section 5):
 
@@ -23,4 +25,4 @@ To replicate section 5, the following data files are needed:
 - LatLongUS.xlsx for latitude and longitude (needed for clustering task in our algorithm);
 - CPI_growth, LongTerm_ir and RealInc_growth are files including observable factors z.
 
-  
+  All figures and tables will be generated directly from the R code. We indicate with comments in the R code when a given part of the code is used to generate a specific table or figure. We use the same numbering of tables and figures as appears in the manuscript.
