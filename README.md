@@ -1,4 +1,4 @@
-# Replication package for "Forecasting house prices growth rates with factor models and spatio-temporal clustering"
+# Replication files for "Forecasting house prices growth rates with factor models and spatio-temporal clustering"
 
 This is a file explaining how to replicate the results of the paper "Forecasting house prices growth rates with factor models and spatio-temporal clustering".
 
