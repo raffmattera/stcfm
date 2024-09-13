@@ -7,7 +7,19 @@ The results can be obtained from the following two main R codes (R version: 4.4.
 - IJF_MF_simulations, for replicating the results (tables and figures) of the simulation study (Section 4);
 - IJF_MF_empirical, to replicate the results of the forecasting experiment (Section 5).
 
-The function implementing our methodology is called "STfacm" and requires the packages "TSclust" and "ClustGeo" to be used. The Ando and Bai (2017) approach is adapted from the "PDMIF" package.
+The function implementing our methodology is called "STfacm" and requires the packages "TSclust" and "ClustGeo" to be used. The Ando and Bai (2017) approach is adapted from the "PDMIF" package. 
+
+The code "IJF_MF_simulations.R" requires the following package versions:
+
+ggplot2_3.5.1; maptools_0.9-5; sp_2.1-4; sf_1.0-16; ARDL_0.2.4; splm_1.6-5; simstudy_0.8.0;  TSclust_1.3.1;  cluster_2.1.6; pdc_1.0.3; ClustGeo_2.1;
+forecast_8.23.0; sandwich_3.1-0;  lmtest_0.9-40; zoo_1.8-12; rio_1.1.1
+
+!! We note that the package "maptools" has been archived from the CRAN on 2023-10-16. Users can either download and install the version "maptools_0.9-5" from the CRAN archive (here: https://cran.r-project.org/src/contrib/Archive/maptools/) or upload the "ushp.RDS" file included in this repository. The "ushp.RDS" object, which can be obtained via the maptools package as indicated in the code, includes information about the US geography needed for the simulation study. This RDS file can be imported using the "readRDS" function of the base package. In the "IJF_MF_simulations.R" code both solutions are available.
+
+The code IJF_MF_empirical.R" requires the following package versions:
+
+ ggplot2_3.5.1;  panelvar_0.5.5;  tidyr_1.3.1; dplyr_1.1.4;  ARDL_0.2.4; splm_1.6-5; dynlm_0.3-6; POET_2.0; TSclust_1.3.1; cluster_2.1.6; pdc_1.0.3; 
+ ClustGeo_2.1; forecast_8.23.0; sandwich_3.1-0;  lmtest_0.9-40; zoo_1.8-12; rio_1.1.1
 
 To reproduce the results correctly, we suggest downloading data and codes in the same folder (e.g. as a zip file) and running the R codes directly from this folder.
 
