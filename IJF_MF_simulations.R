@@ -16,7 +16,6 @@ library(sandwich)
 library(forecast)
 library(ClustGeo)
 library(TSclust)
-library(POET)
 library(simstudy)
 library(splm)
 library(ARDL)
@@ -450,7 +449,11 @@ fe_est <- function(model,varsid){
 
 # Scenario with G=3
 
+# Here ushp is obtained using "readShapePoly" of the maptools package:
 ushp <- readShapePoly("US_State_Boundaries", IDvar="STATE_ABBR")
+# If you find issues, either install maptools_0.9-5 or load the ushp.RDS file:
+ushp <- readRDS("ushp.RDS")
+
 liststates <- ushp$STATE_ABBR[-c(1,12,40,48)]
 liststates <- sort(liststates)
 coords <- coordinates(ushp)
