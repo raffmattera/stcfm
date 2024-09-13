@@ -2,7 +2,7 @@
 
 Here you can find the files to replicate the results of the paper "Forecasting house prices growth rates with factor models and spatio-temporal clustering", written by Raffaele Mattera and Philip Hans Franses.
 
-The results can be obtained from the following two main R codes:
+The results can be obtained from the following two main R codes (R version: 4.4.1):
 
 - IJF_MF_simulations, for replicating the results (tables and figures) of the simulation study (Section 4);
 - IJF_MF_empirical, to replicate the results of the forecasting experiment (Section 5).
